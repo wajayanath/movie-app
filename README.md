@@ -1,4 +1,4 @@
-# musicapp
+# Movie Search App
 
 > A Vue.js project
 
