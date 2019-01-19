@@ -1,7 +1,6 @@
 <template>
       <div>
- <!--      	{{ resList }} -->
-      	<div v-for="item in resList">
+        	<div v-for="item in resList">
       		<div class="row">
     	      	<div class="col-lg-3">
 		          <a href="#">
@@ -13,10 +12,10 @@
 		          <h5>IMDB Rating - {{ item.rating }}   {{ item.genres }}</h5>
 		          <hr>
 		          <p>{{ item.summary }}</p>
-		          <a class="btn btn-primary" :href="item.url" target="_blank">show more</a>
-		        </div>
+		          <router-link :to="{ name:'movie', params:{ id:item.id }}"><button class="btn btn-primary" :href="item.url" target="_blank">show more</button></router-link>
+		        </div> 
 		    </div>
-		        <br/>
+		        <br/> 
          </div>
       </div>
 </template>
